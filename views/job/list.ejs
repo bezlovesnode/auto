@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>From List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <style>table {border-collapse: collapse;} th, td {border: 1px solid black;} th, td {padding: 5px;} tr:nth-child(even) {background: #CCC}</style>
+  <body>
+    <div class="container">
+      <h3><a href="/html/">Index</a></h3>
+      <h1>Auto List</h1>
+      <% if(loclist.length>0) { %>
+      <table class="list-table">
+        <tbody>
+          <% for(var i=0; i<fromlist.length;i++) { %>
+            <tr>
+              <td><a color=black href="/html/from/<%= employees[i].from%>"><%= employees[i].from%></a></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>Nothing found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Detail</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/hdd">Index</a></h3>
+      <h1>Details</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>Product</td>
+            <td>:</td>
+            <td><%= item.product %></td>
+          </tr>
+          <tr>
+            <td>Serial</td>
+            <td>:</td>
+            <td><%= item.serial %></td>
+          </tr>
+          <tr>
+            <td>Size</td>
+            <td>:</td>
+            <td><%= item.size %></td>
+          </tr>
+          <tr>
+            <td>Progress</td>
+            <td>:</td>
+            <td><%= item.progress %></td>
+          </tr>
+          <tr>
+            <td>From</td>
+            <td>:</td>
+            <td><%= item.from %></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3></h3>
+    </div>
+  </body>
+</html>

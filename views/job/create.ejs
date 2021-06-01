@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/job">Job List</a></h3>
+      <h1>Create</h1>
+      <form action="/job/save" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>From Code</td>
+              <td><input type="text" name="from" /></td>
+            </tr>
+            <tr>
+              <td>Company Name</td>
+              <td><input type="text" name="comname" /></td>
+            </tr>
+            <tr>
+              <td>Company Address</td>
+              <td><input type="text" name="comaddress" /></td>
+            </tr>
+            <tr>
+              <td>Contact Name</td>
+              <td><input type="text" name="contact" /></td>
+            </tr>
+            <tr>
+              <td>Contact Phone</td>
+              <td><input type="text" name="phone" /></td>
+            </tr>
+            <tr>
+              <td>Notes</td>
+              <td><input type="text" name="notes1" /></td>
+            </tr>
+            <tr>
+              <td>Notes</td>
+              <td><input type="text" name="notes2" /></td>
+            </tr>
+            <tr>
+              <td>Wipe Req (0-none 1-now 2-later)</td>
+              <td><input type="text" name="wipe" /></td>
+            </tr>
+            <tr>
+              <td>LCD Req (0-exclude 1-include)</td>
+              <td><input type="text" name="lcd" /></td>
+            </tr>
+            <tr>
+              <td>Collect Date / Time</td>
+              <td><input type="text" name="colldatetime" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit">Save</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Auto List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h1><a href="/html/">Auto List</a> - <%= lister.length%> items</h1>
+      <% if(lister.length>0) { %>
+      <table class="list-table">
+        <thead>
+          <tr>
+            <th><a href="/html/">I</a></th>
+            <th>ID/serial</th>
+            <th><a href="/html/from">From</a>/<a href="/html/location">Location</a></th>
+            <th><a href="/html/brand">Brand</a></th>
+            <th><a href="/html/product">Model</a></th>
+            <th>CPU/Notes</th>
+            <th>Ram/Hdd</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<lister.length;i++) { %>
+            <tr>
+              <td rowspan="2"><a href="/html/show/<%= lister[i]._id%>"><img src="/jatr.png" alt="jatr" width="20" height="20"></a></td>
+              <td><a href="/html/idcode/<%= lister[i].idcode%>"><%= lister[i].idcode%></a></td>
+              <td><a href="/html/from/<%= lister[i].from%>"><%= lister[i].from%></a></td>
+              <td><a href="/html/brand/<%= lister[i].brand%>"><%= lister[i].brand%></a></td>
+              <td><a href="/html/product/<%= lister[i].product%>"><%= lister[i].product%></a></td>
+              <td><%= lister[i].processor%></td>
+              <td><%= lister[i].ramtotal%></td>
+            </tr>
+            <tr>
+              <td><%= lister[i].serial%></td>
+              <td><a href="/html/location/<%= lister[i].location%>"><%= lister[i].location%></a></td>
+              <td></td>
+              <td><%= lister[i].version%></td>
+              <td><%= lister[i].notes%></td>
+              <td><%= lister[i].harddrive%></td>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>Nothing found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>

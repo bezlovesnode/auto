@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/job/create">Create Job</a></h3>
+      <h1><a href="/job/">Job List</a> - <%= lister.length%> items</h1>
+      <% if(lister.length>0) { %>
+      <table class="list-table">
+        <thead>
+          <tr>
+            <th><a href="/job/">I</a></th>
+            <th><a href="/job/from">From</a>/Company Name</th>
+            <th>Company Address/Collect Date</th>
+            <th>Contact Name/Phone</th>
+            <th>Notes</th>
+            <th>Wipe Req/Lcd Req</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<lister.length;i++) { %>
+            <tr>
+              <td rowspan="2"><a href="/job/show/<%= lister[i]._id%>"><img src="/jatr.png" alt="jatr" width="20" height="20"></a></td>
+              <td><a href="/job/from/<%= lister[i].from%>"><%= lister[i].from%></a></td>
+              <td><%= lister[i].comaddress%></td>
+              <td><%= lister[i].contact%></td>
+              <td><%= lister[i].notes1%></td>
+              <td><%= lister[i].wipe%></td>
+            </tr>
+            <tr>
+              <td><%= lister[i].comname%></td>
+              <td><%= lister[i].colldatetime%></td>
+              <td><%= lister[i].phone%></td>
+              <td><%= lister[i].notes2%></td>
+              <td><%= lister[i].lcd%></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>Nothing found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>

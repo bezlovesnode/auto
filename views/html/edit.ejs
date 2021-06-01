@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/html">Auto List</a></h3>
+      <h1>Edit</h1>
+      <form action="/html/update/<%= item._id%>" method="post">
+         <table>
+          <tbody>
+            <tr>
+              <td>ID Code</td>
+              <td><input type="text" name="idcode" size="100" value="<%= item.idcode %>" /></td>
+            </tr>
+            <tr>
+              <td>From</td>
+              <td><input type="text" name="from" size="100" value="<%= item.from %>" /></td>
+            </tr>
+            <tr>
+              <td>Location</td>
+              <td><input type="text" name="location" size="100" value="<%= item.location %>" /></td>
+            </tr>
+            <tr>
+              <td>Serial</td>
+              <td><input type="text" name="serial" size="100" value="<%= item.serial %>" /></td>
+            </tr>
+            <tr>
+              <td>Brand</td>
+              <td><input type="text" name="brand" size="100" value="<%= item.brand %>" /></td>
+            </tr>
+            <tr>
+              <td>Product</td>
+              <td><input type="text" name="product" size="100" value="<%= item.product %>" /></td>
+            </tr>
+            <tr>
+              <td>Version</td>
+              <td><input type="text" name="version" size="100" value="<%= item.version %>" /></td>
+            </tr>
+            <tr>
+              <td>CPU</td>
+              <td><input type="text" name="processor" size="100" value="<%= item.processor %>" /></td>
+            </tr>
+            <tr>
+              <td>Ram</td>
+              <td><input type="text" name="ramtotal" size="100" value="<%= item.ramtotal %>" /></td>
+            </tr>
+            <tr>
+              <td>Hdd</td>
+              <td><input type="text" name="harddrive" size="100" value="<%= item.harddrive %>" /></td>
+            </tr>
+            <tr>
+              <td>Notes</td>
+              <td><input type="text" name="notes" size="100" value="<%= item.notes %>" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit">Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

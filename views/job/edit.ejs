@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/job">Job List</a></h3>
+      <h1>Edit</h1>
+      <form action="/job/update/<%= item._id%>" method="post">
+         <table>
+          <tbody>
+            <tr>
+              <td>From Code</td>
+              <td><input type="text" name="from" size="100" value="<%= item.from %>" /></td>
+            </tr>
+            <tr>
+              <td>Company Name</td>
+              <td><input type="text" name="comname" size="100" value="<%= item.comname %>" /></td>
+            </tr>
+            <tr>
+              <td>Company Address</td>
+              <td><input type="text" name="comaddress" size="100" value="<%= item.comaddress %>" /></td>
+            </tr>
+            <tr>
+              <td>Contact Name</td>
+              <td><input type="text" name="contact" size="100" value="<%= item.contact %>" /></td>
+            </tr>
+            <tr>
+              <td>Contact Phone</td>
+              <td><input type="text" name="phone" size="100" value="<%= item.phone %>" /></td>
+            </tr>
+            <tr>
+              <td>Notes</td>
+              <td><input type="text" name="notes1" size="100" value="<%= item.notes1 %>" /></td>
+            </tr>
+            <tr>
+              <td>Notes</td>
+              <td><input type="text" name="notes2" size="100" value="<%= item.notes2 %>" /></td>
+            </tr>
+            <tr>
+              <td>Wipe Req (1-none 2-now 3-later)</td>
+              <td><input type="text" name="wipe" size="100" value="<%= item.wipe %>" /></td>
+            </tr>
+            <tr>
+              <td>LCD Req (1-include 2-exclude)</td>
+              <td><input type="text" name="lcd" size="100" value="<%= item.lcd %>" /></td>
+            </tr>
+            <tr>
+              <td>Collection Date / Time</td>
+              <td><input type="text" name="colldatetime" size="100" value="<%= item.colldatetime %>" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit">Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

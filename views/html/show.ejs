@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Detail</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/html">Index</a></h3>
+      <h1>Details</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>ID</td>
+            <td>:</td>
+            <td><%= item.idcode %></td>
+          </tr>
+          <tr>
+            <td>From</td>
+            <td>:</td>
+            <td><%= item.from %></td>
+          </tr>
+          <tr>
+            <td>Location</td>
+            <td>:</td>
+            <td><%= item.location %></td>
+          </tr>
+          <tr>
+            <td>Serial</td>
+            <td>:</td>
+            <td><%= item.serial %></td>
+          </tr>
+          <tr>
+            <td>Brand</td>
+            <td>:</td>
+            <td><%= item.brand %></td>
+          </tr>
+          <tr>
+            <td>Product</td>
+            <td>:</td>
+            <td><%= item.product %></td>
+          </tr>
+          <tr>
+            <td>Version</td>
+            <td>:</td>
+            <td><%= item.version %></td>
+          </tr>
+          <tr>
+            <td>CPU</td>
+            <td>:</td>
+            <td><%= item.processor %></td>
+          </tr>
+          <tr>
+            <td>Ram</td>
+            <td>:</td>
+            <td><%= item.ramtotal %></td>
+          </tr>
+          <tr>
+            <td>Hdd</td>
+            <td>:</td>
+            <td><%= item.harddrive %></td>
+          </tr>
+          <tr>
+            <td>Notes</td>
+            <td>:</td>
+            <td><%= item.notes %></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a href="/html/edit/<%= item._id%>">EDIT</a></h3>
+    </div>
+  </body>
+</html>

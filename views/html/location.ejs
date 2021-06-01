@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Location List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <style>table {border-collapse: collapse;} th, td {border: 1px solid black;} th, td {padding: 5px;} tr:nth-child(even) {background: #CCC}</style>
+  <body>
+    <div class="container">
+      <h3><a href="/html/">Index</a></h3>
+      <h1>Location List</h1>
+      <% if(locationlist.length>0) { %>
+      <table class="list-table">
+        <tbody>
+          <% for(var i=0; i<locationlist.length;i++) { %>
+            <tr>
+              <td><a color=black href="/html/location/<%= locationlist[i]%>"><%= locationlist[i]%></a></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>Nothing found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>

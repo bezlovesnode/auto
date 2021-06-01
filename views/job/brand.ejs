@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brand List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <style>table {border-collapse: collapse;} th, td {border: 1px solid black;} th, td {padding: 5px;} tr:nth-child(even) {background: #CCC}</style>
+  <body>
+    <div class="container">
+      <h3><a href="/html/">Index</a></h3>
+      <h1>Brand List</h1>
+      <% if(brandlist.length>0) { %>
+      <table class="list-table">
+        <tbody>
+          <% for(var i=0; i<brandlist.length;i++) { %>
+            <tr>
+              <td><a color=black href="/html/brand/<%= brandlist[i]%>"><%= brandlist[i]%></a></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>Nothing found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>

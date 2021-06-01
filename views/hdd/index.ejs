@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hdd List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h1><a href="/hdd/">Hdd List</a> - <%= lister.length%> items</h1>
+      <% if(lister.length>0) { %>
+      <table class="list-table">
+        <thead>
+          <tr>
+            <th><a href="/hdd/">I</a></th>
+            <th><a href="/hdd/product">Product</a></th>
+            <th>Serial</th>
+            <th><a href="/hdd/from">From</a></th>
+            <th>Size</th>
+            <th>Progress</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<lister.length;i++) { %>
+            <tr>
+              <td><a href="/hdd/show/<%= lister[i]._id%>"><img src="/jatr.png" alt="jatr" width="20" height="20"></a></td>
+              <td><a href="/hdd/product/<%= lister[i].product%>"><%= lister[i].product%></a></td>
+              <td><%= lister[i].serial%></td>
+              <td><a href="/hdd/from/<%= lister[i].from%>"><%= lister[i].from%></a></td>
+              <td><%= lister[i].size%></td>
+              <td><%= lister[i].progress%></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>Nothing found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>

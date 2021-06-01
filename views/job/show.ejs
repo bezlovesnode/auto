@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Detail</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/job">Index</a></h3>
+      <h1>Details</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>From Code</td>
+            <td>:</td>
+            <td><%= item.from %></td>
+          </tr>
+          <tr>
+            <td>Company Name</td>
+            <td>:</td>
+            <td><%= item.comname %></td>
+          </tr>
+          <tr>
+            <td>Company Address</td>
+            <td>:</td>
+            <td><%= item.comaddress %></td>
+          </tr>
+          <tr>
+            <td>Contact Name</td>
+            <td>:</td>
+            <td><%= item.contact %></td>
+          </tr>
+          <tr>
+            <td>Contact Phone</td>
+            <td>:</td>
+            <td><%= item.phone %></td>
+          </tr>
+          <tr>
+            <td>Notes</td>
+            <td>:</td>
+            <td><%= item.notes1 %></td>
+          </tr>
+          <tr>
+            <td>Notes</td>
+            <td>:</td>
+            <td><%= item.notes2 %></td>
+          </tr>
+          <tr>
+            <td>Wipe Req (0-none 1-now 2-later)</td>
+            <td>:</td>
+            <td><%= item.wipe %></td>
+          </tr>
+          <tr>
+            <td>LCD Req (0-exclude 1-include)</td>
+            <td>:</td>
+            <td><%= item.lcd %></td>
+          </tr>
+          <tr>
+            <td>Collection Date / Time</td>
+            <td>:</td>
+            <td><%= item.colldatetime %></td>
+          </tr>         
+        </tbody>
+      </table>
+      <h3><a href="/job/edit/<%= item._id%>">EDIT</a></h3>
+    </div>
+  </body>
+</html>
